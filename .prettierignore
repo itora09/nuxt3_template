@@ -1,0 +1,4 @@
+# コードのフォーマットは「ESLint Stylistic」で行う
+**/*.vue
+**/*.js
+**/*.ts
