@@ -1,5 +1,12 @@
+import { getAppConfig } from "./config/appConfig";
+import { getRuntimeConfig } from "./config/runtimeConfig";
+
+const appConfig = getAppConfig();
+const runtimeConfig = getRuntimeConfig();
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true }
-})
+  devtools: { enabled: true },
+  appConfig,
+  runtimeConfig,
+});
