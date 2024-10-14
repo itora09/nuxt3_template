@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare",
     "typecheck": "nuxi typecheck",
     "lint": "npm run lint:eslint && npm run lint:style",
-    "lint:eslint": "eslint .",
+    "lint:eslint": "eslint --cache --cache-strategy content .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,vue}\" --ignore-path .gitignore",
     "lint:fix": "npm run lint:eslint -- --fix && npm run lint:style -- --fix"
   },
