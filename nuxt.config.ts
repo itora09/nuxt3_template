@@ -21,4 +21,13 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler', // sass-embeddedでエラーが出るので対応
+        },
+      },
+    },
+  },
 })
