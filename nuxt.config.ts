@@ -1,5 +1,5 @@
-import { getAppConfig } from './config/appConfig'
-import { getRuntimeConfig } from './config/runtimeConfig'
+import { getAppConfig } from './src/config/appConfig'
+import { getRuntimeConfig } from './src/config/runtimeConfig'
 
 const appConfig = getAppConfig()
 const runtimeConfig = getRuntimeConfig()
@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   appConfig,
   runtimeConfig,
   modules: ['@nuxt/eslint', '@nuxtjs/stylelint-module'],
+  srcDir: 'src/',
   eslint: {
     config: {
       stylistic: {
