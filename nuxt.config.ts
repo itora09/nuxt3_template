@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   appConfig,
   runtimeConfig,
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxtjs/stylelint-module'],
   eslint: {
     config: {
       stylistic: {
@@ -17,5 +17,8 @@ export default defineNuxtConfig({
         quotes: 'single',
       },
     },
+  },
+  typescript: {
+    typeCheck: true,
   },
 })
