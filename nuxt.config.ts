@@ -1,6 +1,7 @@
 import { getAppConfig } from './src/config/appConfig'
 import { getRuntimeConfig } from './src/config/runtimeConfig'
 import { i18n } from './src/config/i18nConfig'
+import { colorMode } from './src/config/colorModeConfig'
 
 const appConfig = getAppConfig()
 const runtimeConfig = getRuntimeConfig()
@@ -10,7 +11,21 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   appConfig,
   runtimeConfig,
-  modules: ['@nuxt/eslint', '@nuxtjs/stylelint-module', '@nuxtjs/i18n'],
+  css: [
+    '@/public/css/material-theme/dark-hc.css',
+    '@/public/css/material-theme/dark-mc.css',
+    '@/public/css/material-theme/light.css',
+    '@/public/css/material-theme/light-hc.css',
+    '@/public/css/material-theme/light-mc.css',
+    '@/public/css/material-theme/light.css',
+    '@/assets/styles/style.scss',
+  ],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/i18n',
+    '@nuxtjs/color-mode',
+  ],
   srcDir: 'src/',
   eslint: {
     config: {
@@ -33,4 +48,5 @@ export default defineNuxtConfig({
     },
   },
   i18n,
+  colorMode,
 })
