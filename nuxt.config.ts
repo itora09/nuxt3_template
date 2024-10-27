@@ -1,5 +1,6 @@
 import { getAppConfig } from './src/config/appConfig'
 import { getRuntimeConfig } from './src/config/runtimeConfig'
+import { i18n } from './src/config/i18nConfig'
 
 const appConfig = getAppConfig()
 const runtimeConfig = getRuntimeConfig()
@@ -9,7 +10,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   appConfig,
   runtimeConfig,
-  modules: ['@nuxt/eslint', '@nuxtjs/stylelint-module'],
+  modules: ['@nuxt/eslint', '@nuxtjs/stylelint-module', '@nuxtjs/i18n'],
   srcDir: 'src/',
   eslint: {
     config: {
@@ -31,4 +32,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  i18n,
 })

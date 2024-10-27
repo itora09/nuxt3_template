@@ -18,7 +18,10 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.5.7",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@vee-validate/zod": "^4.13.2",
     "nuxt": "^3.13.0",
+    "vee-validate": "^4.13.2",
     "vue": "latest",
     "vue-router": "latest"
   },
