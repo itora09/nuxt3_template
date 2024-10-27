@@ -42,7 +42,6 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache",
-    "*.{css,scss,sass,html,vue}": "stylelint",
-    "*.**": "prettier --check --ignore-unknown"
+    "*.{css,scss,sass,html,vue}": "stylelint"
   }
 }
