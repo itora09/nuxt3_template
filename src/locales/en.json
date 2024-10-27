@@ -1,3 +1,7 @@
 {
-  "welcome": "welcome"
+  "welcome": "welcome",
+  "validation": {
+    "required": "{name} is required",
+    "max": "{name} must be at most {length} characters"
+  }
 }
