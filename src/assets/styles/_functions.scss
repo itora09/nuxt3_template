@@ -1,0 +1,17 @@
+// 行数を指定してはみ出した文字列を三点リーダー表示
+@mixin word-ellipsis($num) {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $num;
+  word-break: break-all;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

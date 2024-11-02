@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+@mixin xs {
+  @media screen and (max-width: v.$sp-content-xs-width) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (min-width: #{v.$sp-content-xs-width + 1px}) and (max-width: v.$sp-content-max-width) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and (min-width: #{v.$sp-content-max-width + 1px}) and (max-width: v.$tb-content-max-width) {
+    @content;
+  }
+}
+
+@mixin pc-medium {
+  @media screen and (min-width: #{v.$tb-content-max-width + 1px}) and (max-width: v.$pc-content-medium-max-width) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: #{v.$pc-content-medium-max-width + 1px}) {
+    @content;
+  }
+}

@@ -2,7 +2,7 @@
 * @see https://material-foundation.github.io/material-theme-builder/
 * @description Primary color #63A002
 */
-
+// 色変数の定義
 $primary: var(--md-sys-color-primary);
 $surface-tint: var(--md-sys-color-surface-tint);
 $on-primary: var(--md-sys-color-on-primary);
@@ -52,3 +52,10 @@ $surface-container-low: var(--md-sys-color-surface-container-low);
 $surface-container: var(--md-sys-color-surface-container);
 $surface-container-high: var(--md-sys-color-surface-container-high);
 $surface-container-highest: var(--md-sys-color-surface-container-highest);
+
+// breakpointの定義
+$sp-content-xs-width: 370px;
+$sp-content-max-width: 768px;
+$tb-content-max-width: 1080px;
+$pc-content-medium-max-width: 1280px;
+$pc-content-max-width: 1920px;
