@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use 'variables' as v;
 
 @mixin xs {
   @media screen and (max-width: v.$sp-content-xs-width) {

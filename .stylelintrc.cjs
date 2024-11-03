@@ -1,4 +1,3 @@
-// .stylelintrc.cjs
 module.exports = {
   // lint機能を追加
   extends: [
@@ -9,6 +8,12 @@ module.exports = {
   rules: {
     'block-no-empty': null, // 空のブロックを許容する
     'no-empty-source': null, // 空のstyleブロックを許容する
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['deep'], // deepセレクタを許容する
+      },
+    ],
   },
   overrides: [
     {

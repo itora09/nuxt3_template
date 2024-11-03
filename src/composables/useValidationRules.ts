@@ -5,7 +5,9 @@ export const useValidationRules = () => {
   /** createRules関数の型定義を動的にするためいろいろと定義している */
   type Rules = typeof rules
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  type SecondArgument<T> = T extends (arg1: any, arg2: infer U) => any ? U : never
+  type SecondArgument<T> = T extends (arg1: any, arg2: infer U) => any
+    ? U
+    : never
   type RuleSecondArguments = {
     [K in keyof Rules]: SecondArgument<Rules[K]>
   }
@@ -22,7 +24,7 @@ export const useValidationRules = () => {
    * バリデーションルールの定義
    */
   const rules = {
-  /**
+    /**
      * 必須
      */
     required: (name: string) => {
@@ -38,7 +40,6 @@ export const useValidationRules = () => {
         message: i18n.t('validation.max', { length: option.maximum, name }),
       })
     },
-
   }
 
   /**
@@ -53,7 +54,8 @@ export const useValidationRules = () => {
    * @returns ruleListをandで連結したZodSchema
    */
   const createRules = (name: string = '', ruleList: RuleListItem[]) => {
-    if (!ruleList || ruleList.length === 0) throw new Error('rules is required.')
+    if (!ruleList || ruleList.length === 0)
+      throw new Error('rules is required.')
     const schema = ruleList.reduce<ZodSchema | null>((result, rule) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const option = rule.option as any

@@ -14,7 +14,8 @@ export const i18n: NuxtI18nOptions = {
     { code: 'en', iso: 'en-US', name: 'English' },
   ],
   vueI18n: './src/config/i18nConfig.ts', // NOTE: ファイルを増やしたくないのでこのファイルでまとめて定義している
-  detectBrowserLanguage: { // NOTE: ユーザーがブラウザに来た時の言語に合わせて切り替える
+  detectBrowserLanguage: {
+    // NOTE: ユーザーがブラウザに来た時の言語に合わせて切り替える
     useCookie: true,
     cookieKey: 'i18n_redirected',
     redirectOn: 'root', // recommended
@@ -22,7 +23,6 @@ export const i18n: NuxtI18nOptions = {
     cookieCrossOrigin: true,
     fallbackLocale: 'ja',
   },
-
 } as const
 
 export default {

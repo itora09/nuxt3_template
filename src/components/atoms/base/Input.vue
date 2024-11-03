@@ -1,17 +1,18 @@
 <!--
   @name AtomsBaseInput
-  @description ベースのinputコンポーネント
+  @description
+    ベースのinputコンポーネント
+    エラーメッセージを表示する都合上ルートに二つのDOMがあるため、スタイルと適用する場合はdeepセレクタを使う
 -->
 <template>
-  <input
-    v-model="useFieldValue"
-    class="atom-base-input"
-    :class="props.class"
-  >
+  <input v-model="useFieldValue" class="atom-base-input" :class="props.class" />
   <component
     :is="props.errorOption?.isSmall ? 'small' : 'p'"
     class="error"
-    :class="{ '-hide': props.errorOption?.hideError, '-small': props.errorOption?.isSmall }"
+    :class="{
+      '-hide': props.errorOption?.hideError,
+      '-small': props.errorOption?.isSmall,
+    }"
   >
     <!-- NOTE: エラーメッセージが無いとレイアウトシフトを起こすので空文字を入れておく -->
     {{ errorMessage }}&nbsp;
@@ -64,11 +65,16 @@ type Props = {
     isSmall: boolean
   }
 }
+
 const props = defineProps<Props>()
 
-const { value: useFieldValue, errorMessage } = useField(props.validatorName ?? '', undefined, {
-  syncVModel: true,
-})
+const { value: useFieldValue, errorMessage } = useField(
+  props.validatorName ?? '',
+  undefined,
+  {
+    syncVModel: true,
+  },
+)
 </script>
 
 <style lang="scss" scoped>
