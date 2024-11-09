@@ -8,7 +8,7 @@ export const requireComponentHeaderComment = {
     type: 'problem',
     docs: {
       description:
-        'ファイルの先頭に @name と @description を含むコメントブロックが必要です。',
+        'ファイルの先頭に @name と @description を含むコメントブロックがあるかどうかチェックするルール',
       recommended: false,
     },
     schema: [],
