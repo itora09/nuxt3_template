@@ -2,11 +2,11 @@
  * @see https://i18n.nuxtjs.org/docs/getting-started
  */
 
-import type { NuxtI18nOptions } from '@nuxtjs/i18n'
+import type { NuxtConfig } from '@nuxt/schema'
 import ja from '../locales/ja.json'
 import en from '../locales/en.json'
 
-export const i18n: NuxtI18nOptions = {
+export const i18n: NuxtConfig['i18n'] = {
   strategy: 'prefix_and_default',
   defaultLocale: 'ja',
   locales: [
