@@ -2,7 +2,7 @@
   @name AtomsBaseInput
   @description
     ベースのinputコンポーネント
-    エラーメッセージを表示する都合上ルートに二つのDOMがあるため、スタイルと適用する場合はdeepセレクタを使う
+    エラーメッセージを表示する都合上ルートに二つのDOMがあるため、スタイルを適用する場合はdeepセレクタを使う
 -->
 <template>
   <input v-model="useFieldValue" class="atom-base-input" :class="props.class" />

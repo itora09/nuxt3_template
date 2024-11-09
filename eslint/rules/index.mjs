@@ -1,5 +1,5 @@
-import requireHeaderComment from './require-header-comment.js'
+import { requireComponentHeaderComment } from './require-component-header-comment.js'
 
 export const rules = Object.freeze({
-  'require-header-comment': requireHeaderComment,
+  'require-component-header-comment': requireComponentHeaderComment,
 })

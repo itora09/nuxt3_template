@@ -9,6 +9,7 @@ export default withNuxt(
       'vue/max-attributes-per-line': 'off', // 1行につき属性を1つだけ許容する(prettierと競合するため)
       'vue/html-self-closing': 'off', // 自己終了タグを強制する(prettierと競合するため)
       'vue/singleline-html-element-content-newline': 'off', // タグの中身を1行にする(prettierと競合するため)
+      '@stylistic/arrow-parens': 'off', // アロー関数の括弧省略を許容する（使えないと不便。。。）
     },
   },
   {
@@ -19,7 +20,7 @@ export default withNuxt(
       },
     },
     rules: {
-      'custom-rules/require-header-comment': 'error', // ファイルの先頭にコメントブロックが必要
+      'custom-rules/require-component-header-comment': 'error', // ファイルの先頭にコメントブロックが必要
     },
   },
 )
