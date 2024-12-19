@@ -1,5 +1,6 @@
 /**
 * @see https://material-foundation.github.io/material-theme-builder/
+* @see https://m3.material.io/styles/color/roles
 * @description Primary color #63A002
 */
 // 色変数の定義
@@ -59,3 +60,10 @@ $sp-content-max-width: 768px;
 $tb-content-max-width: 1080px;
 $pc-content-medium-max-width: 1280px;
 $pc-content-max-width: 1920px;
+
+// その他の定義
+$space-base: 4px;
+
+@function space($value) {
+  @return $value * $space-base;
+}

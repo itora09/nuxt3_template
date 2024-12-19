@@ -14,9 +14,9 @@ export const useStateWithNoteComment = {
         'useStateを使用する場合は NOTE: コメントを記述してください。',
     },
   },
-  create(context) {
+  create: function (context) {
     return {
-      CallExpression(node) {
+      CallExpression: function (node) {
         if (node.callee.name === 'useState') {
           // 全てのコメントの中から対象のuseStateの前のコメントを取得
           const commentList = context.sourceCode.getAllComments()

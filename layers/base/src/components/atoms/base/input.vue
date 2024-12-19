@@ -5,7 +5,11 @@
     エラーメッセージを表示する都合上ルートに二つのDOMがあるため、スタイルを適用する場合はdeepセレクタを使う
 -->
 <template>
-  <input v-model="useFieldValue" class="atom-base-input" :class="props.class" />
+  <input
+    v-model="useFieldValue"
+    class="atoms-base-input"
+    :class="props.class"
+  />
   <component
     :is="props.errorOption?.isSmall ? 'small' : 'p'"
     class="error"
@@ -80,10 +84,12 @@ const { value: useFieldValue, errorMessage } = useField(
 <style lang="scss" scoped>
 @use '@/assets/styles/variables' as v;
 
-.atom-base-input {
+// FIXME: 何故か大文字じゃないとエラーになる。。。
+.atoms-base-input {
   display: block;
 }
 
+// stylelint-disable-next-line custom/component-class-specificity
 .error {
   display: block;
   color: v.$error;

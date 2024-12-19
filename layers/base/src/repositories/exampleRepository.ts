@@ -1,5 +1,5 @@
-import { callApi } from '@/utils/api'
-import { exampleSchema } from '@/models/exampleModel'
+import { callApi } from 'base/utils/api'
+import { exampleSchema } from 'base/models/exampleModel'
 
 export const ExampleResponseSchema = exampleSchema
 

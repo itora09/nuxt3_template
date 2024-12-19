@@ -1,0 +1,4 @@
+welcome: ようこそ
+validation:
+  required: '{name}は必須項目です'
+  max: '{name}は{length}文字以内で入力してください'

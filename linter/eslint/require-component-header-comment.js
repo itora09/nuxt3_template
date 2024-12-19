@@ -22,9 +22,9 @@ export const requireComponentHeaderComment = {
         '@nameタグはcomponent以下のディレクトリ階層+ファイル名をキャメルケースでつなげ拡張子を削除したテキストを指定してください。（例：AtomsBaseInput）',
     },
   },
-  create(context) {
+  create: function (context) {
     return {
-      Program(node) {
+      Program: function (node) {
         const sourceCode = context.sourceCode
         const text = sourceCode.text
 
@@ -82,7 +82,8 @@ export const requireComponentHeaderComment = {
         const ext = path.extname(filePath)
         const parts = relativePath
           .replace(ext, '')
-          .replace('src\\components\\', '')
+          .replace(/-/g, '\\')
+          .replace(/.*components/g, '')
           .split(path.sep)
         const camelCaseText = parts
           .map((part) => part.charAt(0).toUpperCase() + part.slice(1))

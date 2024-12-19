@@ -3,15 +3,14 @@
  */
 
 import type { NuxtConfig } from '@nuxt/schema'
-import ja from '../locales/ja.json'
-import en from '../locales/en.json'
 
 export const i18n: NuxtConfig['i18n'] = {
+  langDir: '../src/locales/',
   strategy: 'prefix_and_default',
   defaultLocale: 'ja',
   locales: [
-    { code: 'ja', iso: 'ja-JP', name: '日本語' },
-    { code: 'en', iso: 'en-US', name: 'English' },
+    { code: 'ja', iso: 'ja-JP', name: '日本語', file: 'ja.yaml' },
+    { code: 'en', iso: 'en-US', name: 'English', file: 'en.yaml' },
   ],
   vueI18n: './src/config/i18nConfig.ts', // NOTE: ファイルを増やしたくないのでこのファイルでまとめて定義している
   detectBrowserLanguage: {
@@ -28,8 +27,4 @@ export const i18n: NuxtConfig['i18n'] = {
 export default {
   legacy: false,
   locale: 'ja',
-  messages: {
-    ja,
-    en,
-  },
 }

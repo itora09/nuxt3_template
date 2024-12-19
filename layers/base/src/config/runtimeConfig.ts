@@ -4,10 +4,16 @@ const commonConfig = {}
 
 const developmentConfig = {
   ...commonConfig,
+  public: {
+    baseUrl: 'http://localhost:3000',
+  },
 }
 
 const productionConfig = {
   ...commonConfig,
+  public: {
+    baseUrl: 'http://localhost:3000',
+  },
 }
 
 export const getRuntimeConfig = () => {

@@ -1,6 +1,5 @@
 /**
  * @type {import('eslint').Rule.RuleModule}
- * @description useStateの使用を禁止するルール
  */
 export const noUseState = {
   meta: {
@@ -15,9 +14,9 @@ export const noUseState = {
         'useStateの使用は禁止されています。 composable+provide/inject を使用してください。',
     },
   },
-  create(context) {
+  create: function (context) {
     return {
-      ImportDeclaration(node) {
+      ImportDeclaration: function (node) {
         // "useState" がインポートされているかをチェック
         if (
           node.specifiers.some(
@@ -31,7 +30,7 @@ export const noUseState = {
           })
         }
       },
-      CallExpression(node) {
+      CallExpression: function (node) {
         // "useState" が関数として呼び出されているかをチェック
         if (node.callee.name === 'useState') {
           context.report({

@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 // 行数を指定してはみ出した文字列を三点リーダー表示
 @mixin word-ellipsis($num) {
   -webkit-box-orient: vertical;
@@ -14,4 +16,8 @@
       @content;
     }
   }
+}
+
+@function space($value) {
+  @return $value * v.$space-base;
 }
