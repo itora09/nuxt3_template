@@ -1,26 +1,16 @@
 const nuxtEnv = process.env.NUXT_ENV ?? 'development'
 
-const commonConfig = {
-  public: {},
-}
+const commonConfig = {}
 
 const developmentConfig = {
   ...commonConfig,
-  public: {
-    ...commonConfig.public,
-    baseUrl: 'http://localhost:3000',
-  },
 }
 
 const productionConfig = {
   ...commonConfig,
-  public: {
-    ...commonConfig.public,
-    baseUrl: 'http://localhost:3000',
-  },
 }
 
-export const getRuntimeConfig = () => {
+export const getAppConfig = () => {
   switch (nuxtEnv) {
     case 'development':
       return developmentConfig
