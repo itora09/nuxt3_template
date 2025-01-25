@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxtjs/stylelint-module',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
+    '@nuxt/test-utils/module',
   ],
   devtools: { enabled: true },
   css: [
