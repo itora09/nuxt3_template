@@ -35,6 +35,11 @@ describe('AtomsBaseInput', () => {
     vi.clearAllMocks()
   })
 
+  test('snapshot', () => {
+    const wrapper = mount(AtomsBaseInput)
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
   test('デフォルトでinputタグがレンダリングされる', () => {
     const wrapper = mount(AtomsBaseInput)
     expect(wrapper.find('input.atoms-base-input').exists()).toBe(true)

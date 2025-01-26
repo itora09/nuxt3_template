@@ -3,6 +3,11 @@ import { mount } from '@vue/test-utils'
 import AtomsBaseButton from '../../../../components/atoms/base/button.vue'
 
 describe('AtomsBaseButton', () => {
+  test('snapshot', () => {
+    const wrapper = mount(AtomsBaseButton)
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
   test('デフォルトでbuttonタグがレンダリングされる', () => {
     const wrapper = mount(AtomsBaseButton)
     expect(wrapper.find('button').exists()).toBe(true)

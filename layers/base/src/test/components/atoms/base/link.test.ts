@@ -29,6 +29,19 @@ describe('AtomsBaseLink', () => {
     useLocalePath: () => mockLocalePath,
   }
 
+  test('snapshot', () => {
+    const wrapper = mount(AtomsBaseLink, {
+      props: {
+        to: '/test',
+      },
+      global: {
+        stubs: defaultStubs,
+        mocks: defaultMocks,
+      },
+    })
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
   test('NuxtLinkがレンダリングされる', () => {
     const wrapper = mount(AtomsBaseLink, {
       props: {

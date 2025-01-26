@@ -3,6 +3,11 @@ import { mount } from '@vue/test-utils'
 import AtomsBaseImage from '../../../../components/atoms/base/image.vue'
 
 describe('AtomsBaseImage', () => {
+  test('snapshot', () => {
+    const wrapper = mount(AtomsBaseImage)
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
   test('デフォルトでimgタグがレンダリングされる', () => {
     const wrapper = mount(AtomsBaseImage)
     expect(wrapper.find('img').exists()).toBe(true)

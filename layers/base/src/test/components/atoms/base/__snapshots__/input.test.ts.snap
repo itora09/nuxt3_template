@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AtomsBaseInput > snapshot 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <input
+    class="atoms-base-input"
+    data-v-4b124123=""
+    hideerror="false"
+  />
+  <p
+    class="error"
+    data-v-4b124123=""
+  >
+    <!-- NOTE: エラーメッセージが無いとレイアウトシフトを起こすので空文字を入れておく -->
+       
+  </p>
+  
+</div>
+`;
