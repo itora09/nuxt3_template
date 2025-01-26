@@ -12,7 +12,7 @@
     "lint": "npm run lint:eslint && npm run lint:style",
     "lint:eslint": "eslint --cache --cache-strategy content .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,vue}\" --ignore-path .gitignore",
-    "lint:prettier": "prettier --cache --cache-strategy content --check './src/**/*.{js,jsx,ts,tsx,vue,css,scss,sass}'",
+    "lint:prettier": "prettier --cache --cache-strategy content --check '**/src/**/*.{js,jsx,ts,tsx,vue,css,scss,sass}'",
     "lint:fix": "npm run lint:eslint -- --fix && npm run lint:style -- --fix && npm run lint:prettier -- --write",
     "husky:init": "husky",
     "lint-staged": "lint-staged",

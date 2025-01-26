@@ -6,7 +6,6 @@
   <component :is="props.tag" class="atoms-base-button">
     <slot />
   </component>
-  <img />
 </template>
 
 <script setup lang="ts">
