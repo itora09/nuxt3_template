@@ -7,12 +7,12 @@ exports[`AtomsBaseInput > snapshot 1`] = `
   
   <input
     class="atoms-base-input"
-    data-v-4b124123=""
+    data-v-7145b9cc=""
     hideerror="false"
   />
   <p
     class="error"
-    data-v-4b124123=""
+    data-v-7145b9cc=""
   >
     <!-- NOTE: エラーメッセージが無いとレイアウトシフトを起こすので空文字を入れておく -->
        
