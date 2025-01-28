@@ -5,11 +5,7 @@
     エラーメッセージを表示する都合上ルートに二つのDOMがあるため、スタイルを適用する場合はdeepセレクタを使う
 -->
 <template>
-  <input
-    v-model="useFieldValue"
-    class="atoms-base-input"
-    :class="props.class"
-  />
+  <input v-model="useFieldValue" class="atoms-base-input" v-bind="props" />
   <component
     :is="props.errorOption?.isSmall ? 'small' : 'p'"
     class="error"
@@ -57,7 +53,6 @@ type Props = {
   src?: InputHTMLAttributes['src']
   step?: InputHTMLAttributes['step']
   type?: InputHTMLAttributes['type']
-  value?: InputHTMLAttributes['value']
   width?: InputHTMLAttributes['width']
   // 以下はプロジェクトで使う属性
   class?: string
@@ -72,6 +67,7 @@ type Props = {
 
 const props = defineProps<Props>()
 
+// composable
 const { value: useFieldValue, errorMessage } = useField(
   props.validatorName ?? '',
   undefined,

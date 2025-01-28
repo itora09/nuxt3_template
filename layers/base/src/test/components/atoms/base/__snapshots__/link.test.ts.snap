@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AtomsBaseLink > snapshot 1`] = `
+<a
+  class="ha-link"
+  external="false"
+  to="/test"
+>
+  
+  
+</a>
+`;

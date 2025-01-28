@@ -24,3 +24,6 @@ logs
 !.env.example
 .stylelintcache
 .eslintcache
+
+# custom
+coverage

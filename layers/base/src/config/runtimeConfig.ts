@@ -1,5 +1,3 @@
-const nuxtEnv = process.env.NUXT_ENV ?? 'development'
-
 const commonConfig = {
   public: {},
 }
@@ -21,6 +19,7 @@ const productionConfig = {
 }
 
 export const getRuntimeConfig = () => {
+  const nuxtEnv = process.env.NUXT_ENV ?? 'development'
   switch (nuxtEnv) {
     case 'development':
       return developmentConfig

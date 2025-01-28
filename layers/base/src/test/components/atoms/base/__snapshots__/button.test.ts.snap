@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AtomsBaseButton > snapshot 1`] = `
+<button
+  class="atoms-base-button"
+  data-v-6ee581dc=""
+>
+  
+  
+</button>
+`;

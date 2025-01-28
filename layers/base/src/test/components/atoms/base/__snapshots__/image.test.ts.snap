@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AtomsBaseImage > snapshot 1`] = `
+<img
+  loading="lazy"
+  src="images/no-image.png"
+/>
+`;
