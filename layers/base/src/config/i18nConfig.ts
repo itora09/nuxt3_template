@@ -22,6 +22,9 @@ export const i18n: NuxtConfig['i18n'] = {
     cookieCrossOrigin: true,
     fallbackLocale: 'ja',
   },
+  compilation: {
+    strictMessage: false,
+  },
 } as const
 
 export default {

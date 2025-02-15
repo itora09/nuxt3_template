@@ -14,7 +14,12 @@ function generateExpectedClassName(filePath) {
 
   // 相対パスをディレクトリ名で分割し、最後の要素（ファイル名）を含むようにクラス名を生成
   const parts = relativePath.split(path.sep)
-  const fileName = path.basename(parts.pop(), path.extname(filePath))
+  const fileName = path
+    .basename(parts.pop(), path.extname(filePath))
+    .replace(/([A-Z])/g, ' $1')
+    .split(' ')
+    .join('-')
+    .toLowerCase()
   parts.push(fileName)
 
   // すべてのパス部分をハイフンで連結し、無効な文字を削除

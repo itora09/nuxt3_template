@@ -22,15 +22,18 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.7.5",
+    "@nuxt/icon": "^1.10.3",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/i18n": "^9.0.0",
     "@vee-validate/zod": "^4.13.2",
     "nuxt": "^3.15.3",
+    "nuxt-swiper": "^2.0.0",
     "vee-validate": "^4.13.2",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@iconify-json/ri": "^1.2.5",
     "@nuxt/test-utils": "^3.15.4",
     "@nuxtjs/stylelint-module": "^5.2.0",
     "@vitest/coverage-v8": "^3.0.4",

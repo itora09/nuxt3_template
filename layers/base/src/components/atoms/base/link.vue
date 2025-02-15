@@ -38,7 +38,12 @@ const runtimeConfig = useRuntimeConfig()
 const localePath = useLocalePath()
 
 // computed
-const isExternalReference = computed(() => !!props.to?.match(/^https?:\/\//))
+const isExternalReference = computed(
+  () =>
+    !!props.to?.match(/^https?:\/\//) ||
+    !!props.to?.match(/^mailto:/) ||
+    !!props.to?.match(/^tel:/),
+)
 const linkTo = computed(() => {
   if (isExternalReference.value) {
     return props.to

@@ -84,19 +84,28 @@ export const requireComponentHeaderComment = {
           .replace(ext, '')
           .replace(/-/g, '\\')
           .replace(/.*components/g, '')
+          .replace('.server', '')
+          .replace('.client', '')
           .split(path.sep)
         const camelCaseText = parts
           .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
           .join('')
-        if (hasName && !commentText.includes(`@name ${camelCaseText}`)) {
-          context.report({
-            node,
-            messageId: 'missingNameCamelCase',
-            loc: {
-              start: { line: 1, column: 0 },
-              end: { line: 1, column: 0 },
-            },
-          })
+        if (hasName) {
+          // !commentText.includes(`@name ${camelCaseText}`)
+          const nameText =
+            commentText
+              .split('\n')
+              .filter((line) => line.includes('@name'))[0] ?? ''
+          if (nameText.trim() !== `@name ${camelCaseText}`) {
+            context.report({
+              node,
+              messageId: 'missingNameCamelCase',
+              loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 0 },
+              },
+            })
+          }
         }
       },
     }
