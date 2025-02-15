@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     '@nuxtjs/stylelint-module',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
-    '@nuxt/test-utils/module',
+    '@nuxt/icon',
+    'nuxt-swiper',
   ],
   devtools: { enabled: true },
   css: [
@@ -51,4 +52,9 @@ export default defineNuxtConfig({
     },
   },
   i18n,
+  icon: {
+    serverBundle: {
+      collections: ['ri'],
+    },
+  },
 })

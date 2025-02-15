@@ -3,7 +3,7 @@
   @description Imageタグをラップしたコンポーネント、画像の読み込みは必ずこのコンポーネントを使う
 -->
 <template>
-  <img v-bind="props" />
+  <img class="atoms-base-image" v-bind="props" />
 </template>
 
 <script setup lang="ts">
@@ -22,3 +22,9 @@ const props = withDefaults(defineProps<Props>(), {
   loading: 'lazy',
 })
 </script>
+
+<style lang="scss" scoped>
+.atoms-base-image {
+  display: block;
+}
+</style>

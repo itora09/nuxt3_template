@@ -2,8 +2,12 @@
 
 exports[`AtomsBaseButton > snapshot 1`] = `
 <button
+  blank="false"
   class="atoms-base-button"
   data-v-6ee581dc=""
+  forceanchorlink="false"
+  nolocale="false"
+  type="button"
 >
   
   

@@ -21,6 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style lang="scss" scoped>
 .molecules-header-logo {
+  display: block;
   > .image {
     width: 100%;
     height: 100%;

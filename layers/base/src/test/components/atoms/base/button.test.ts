@@ -1,6 +1,7 @@
 import { describe, test, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import AtomsBaseButton from '../../../../components/atoms/base/button.vue'
+import AtomsBaseLink from '../../../../components/atoms/base/link.vue'
 
 describe('AtomsBaseButton', () => {
   test('snapshot', () => {
@@ -13,13 +14,14 @@ describe('AtomsBaseButton', () => {
     expect(wrapper.find('button').exists()).toBe(true)
   })
 
-  test('tagプロップスでaタグを指定できる', () => {
+  test('typeプロップスでリンクを指定できる', () => {
     const wrapper = mount(AtomsBaseButton, {
       props: {
-        tag: 'a',
+        type: 'link',
+        to: '/test',
       },
     })
-    expect(wrapper.find('a').exists()).toBe(true)
+    expect(wrapper.findComponent(AtomsBaseLink).exists()).toBe(true)
   })
 
   test('スロットの内容が正しく表示される', () => {
