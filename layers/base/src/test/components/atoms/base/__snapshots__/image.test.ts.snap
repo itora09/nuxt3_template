@@ -2,6 +2,8 @@
 
 exports[`AtomsBaseImage > snapshot 1`] = `
 <img
+  class="atoms-base-image"
+  data-v-bb4d6b88=""
   loading="lazy"
   src="images/no-image.png"
 />
